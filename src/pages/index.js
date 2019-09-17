@@ -1,21 +1,30 @@
+/** @jsx jsx */
 import React from "react"
-import { Link } from "gatsby"
+import { jsx } from "theme-ui"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import { AppShell } from "../components/app"
+
+const mainContentListStyles = {
+  listStyleType: "none",
+  "& > * + *": {
+    paddingTop: [1],
+  },
+}
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  <AppShell>
+    <ul sx={mainContentListStyles}>
+      <li>
+        <p>Software Engineer @ Capital One</p>
+      </li>
+      <li>
+        <p>Located in Richmond, VA</p>
+      </li>
+      <li>
+        <p>Focusing on design systems engineering</p>
+      </li>
+    </ul>
+  </AppShell>
 )
 
 export default IndexPage
