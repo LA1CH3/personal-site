@@ -1,19 +1,10 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+import { Styled } from "theme-ui"
 
-import { Link as GLink } from "gatsby"
+import { Link as GatsbyLink } from "gatsby"
 
-export const NavLink = ({ children, to }) => (
-  <GLink
-    to={to}
-    sx={{
-      fontFamily: "heading",
-      textTransform: "uppercase",
-      textDecoration: "none",
-      color: "black",
-      fontSize: [2, 3, 4],
-    }}
-  >
+export const Link = ({ to, children }) => (
+  // @ts-ignore
+  <Styled.a as={GatsbyLink} to={to}>
     {children}
-  </GLink>
+  </Styled.a>
 )

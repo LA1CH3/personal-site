@@ -1,45 +1,30 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 
-import { NavLink } from "../navigation"
+import { Flex } from "../layout"
+import { Link } from "../navigation"
 
 export const AppHeader = () => (
-  <header
-    sx={{
-      display: "flex",
-      justifyContent: "space-between",
-    }}
+  <Flex
+    as="header"
+    direction={["column", "row"]}
+    justifyContent={["center", "space-between"]}
+    alignItems={["center", "flex-start"]}
+    childMarginTop={[3, 0]}
   >
-    <ul
-      sx={{
-        listStyleType: "none",
-        display: "flex",
-        flexDirection: "column",
-        "& > * + *": {
-          marginTop: [4, 5, 6],
-        },
-      }}
-    >
-      <li>
-        <NavLink to="/blog">Blog</NavLink>
-      </li>
-      <li>
-        <NavLink to="/music">Music</NavLink>
-      </li>
-      <li>
-        <NavLink to="/art">Art</NavLink>
-      </li>
-    </ul>
-    <h1
-      sx={{
-        fontFamily: "heading",
-        fontSize: [4, 5, 6],
-        textTransform: "uppercase",
-        width: ["10rem", "20rem"],
-        textAlign: "right",
-      }}
-    >
-      Jay Laiche
-    </h1>
-  </header>
+    <Styled.h1>Jay Laiche</Styled.h1>
+    <nav>
+      <Flex as="ul" childMarginLeft={[4, null, 5]} justifyContent={["center"]}>
+        <li>
+          <Link to="/blog">Blog</Link>
+        </li>
+        <li>
+          <Link to="/music">Music</Link>
+        </li>
+        <li>
+          <Link to="/art">Art</Link>
+        </li>
+      </Flex>
+    </nav>
+  </Flex>
 )

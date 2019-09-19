@@ -37,6 +37,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-typescript",
-    "gatsby-plugin-theme-ui",
+    // "gatsby-plugin-theme-ui",
   ],
 }

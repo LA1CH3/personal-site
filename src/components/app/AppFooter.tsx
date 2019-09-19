@@ -1,34 +1,27 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
+
+import { Flex } from "../layout"
 
 export const AppFooter = () => (
-  <footer
-    sx={{
-      display: "flex",
-      justifyContent: "space-between",
-      fontFamily: "body",
-    }}
+  <Flex
+    as="footer"
+    direction={["column", "row"]}
+    childMarginTop={[3, 0]}
+    justifyContent={["null", "space-between"]}
+    alignItems={["center", "flex-start"]}
   >
-    <ul
-      sx={{
-        listStyleType: "none",
-        display: "flex",
-        flexDirection: "row",
-        "& > * + *": {
-          paddingLeft: [3],
-        },
-      }}
-    >
+    <Flex as="ul" childMarginLeft={[4]}>
       <li>
-        <a>Github</a>
+        <Styled.a as="a">Github</Styled.a>
       </li>
       <li>
-        <a>LinkedIn</a>
+        <Styled.a as="a">LinkedIn</Styled.a>
       </li>
       <li>
-        <a>Email</a>
+        <Styled.a as="a">Email</Styled.a>
       </li>
-    </ul>
-    <div>Copyright 2019 - Jay Laiche</div>
-  </footer>
+    </Flex>
+    <Styled.p>© 2019 Jay Laiche</Styled.p>
+  </Flex>
 )

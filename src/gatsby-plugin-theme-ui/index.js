@@ -13,9 +13,14 @@ const theme = {
     body: "Roboto, sans-serif",
   },
   fontSizes: [12, 16, 20, 24, 32, 48, 64],
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700,
+  },
   colors: {
-    black: "hsl(0,0%,0%)",
-    white: "hsl(0,0%,100%)",
+    text: "hsl(0,0%,0%)",
+    secondary: "hsl(247, 98%, 50%)",
   },
   mediaQueries: {
     small: `@media screen and (min-width: ${breakpoints[0]})`,
@@ -26,9 +31,33 @@ const theme = {
     root: {
       fontFamily: "body",
     },
+    p: {
+      fontFamily: "body",
+      fontSize: [1],
+    },
+    a: {
+      fontFamily: "body",
+      fontSize: [1],
+      color: "text",
+      textDecoration: "underline",
+      ":hover": {
+        color: "secondary",
+        cursor: "pointer",
+      },
+    },
     h1: {
       fontFamily: "heading",
-      fontSize: 20,
+      color: "text",
+      textTransform: "uppercase",
+      fontSize: [4, null, 5, 6],
+      textTransform: "uppercase",
+      width: [null, "10rem", "20rem"],
+      textAlign: ["center", "left"],
+    },
+    h2: {
+      fontFamily: "heading",
+      color: "text",
+      fontSize: [1, 2, 3, 4],
     },
   },
 }
