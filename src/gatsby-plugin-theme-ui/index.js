@@ -48,7 +48,6 @@ const theme = {
     h1: {
       fontFamily: "heading",
       color: "text",
-      textTransform: "uppercase",
       fontSize: [4, null, 5, 6],
       textTransform: "uppercase",
       width: [null, "10rem", "20rem"],
@@ -58,6 +57,20 @@ const theme = {
       fontFamily: "heading",
       color: "text",
       fontSize: [1, 2, 3, 4],
+    },
+    h3: {
+      fontFamily: "heading",
+      color: "text",
+      fontSize: [1, 2, null],
+    },
+    blogTitle: {
+      textTransform: "uppercase",
+      color: "text",
+      fontFamily: "heading",
+      fontSize: [1, 2, 3, 4],
+      ":hover": {
+        color: "secondary",
+      },
     },
   },
 }

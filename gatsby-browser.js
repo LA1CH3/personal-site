@@ -5,3 +5,6 @@
  */
 
 // You can delete this file if you're not using it
+
+import "typeface-major-mono-display"
+import "typeface-roboto"
