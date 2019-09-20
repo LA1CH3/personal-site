@@ -7,9 +7,6 @@ import { Flex } from "../components/layout"
 
 const mainContentListStyles = {
   listStyleType: "none",
-  "& > * + *": {
-    paddingTop: [2],
-  },
   paddingBottom: "64px",
 }
 
@@ -33,16 +30,18 @@ const IndexPage = ({
       </ul>
     </section>
     <Flex as="section" direction="column" childMarginTop={[1, 3]}>
-      <Styled.h3 as="span">latest blog post</Styled.h3>
+      <Styled.h3 as="span">latest blog post:</Styled.h3>
       {edges.map(({ node }) => (
-        <Flex direction="column" childMarginTop={[1, 2, 3]}>
+        <Flex direction="column">
           <Link
-            to={node.fields.slug}
+            to={`/blog/${node.fields.slug}`}
             sx={{
               textTransform: "uppercase",
               color: "text",
               fontFamily: "heading",
-              fontSize: [2, 3, 4, 5],
+              fontSize: [3, 4, 5],
+              lineHeight: [1.3],
+              marginBottom: [1, 2],
               ":hover": {
                 color: "secondary",
               },
@@ -50,7 +49,7 @@ const IndexPage = ({
           >
             {node.frontmatter.title}
           </Link>
-          <Styled.p>{node.frontmatter.date}</Styled.p>
+          <Styled.p>Published {node.frontmatter.date}</Styled.p>
         </Flex>
       ))}
     </Flex>
@@ -72,6 +71,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }

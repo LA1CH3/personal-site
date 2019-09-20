@@ -34,6 +34,7 @@ const theme = {
     p: {
       fontFamily: "body",
       fontSize: [1],
+      lineHeight: [1.2],
     },
     a: {
       fontFamily: "body",
@@ -57,20 +58,12 @@ const theme = {
       fontFamily: "heading",
       color: "text",
       fontSize: [1, 2, 3, 4],
+      lineHeight: [1.15],
     },
     h3: {
       fontFamily: "heading",
       color: "text",
       fontSize: [1, 2, null],
-    },
-    blogTitle: {
-      textTransform: "uppercase",
-      color: "text",
-      fontFamily: "heading",
-      fontSize: [1, 2, 3, 4],
-      ":hover": {
-        color: "secondary",
-      },
     },
   },
 }

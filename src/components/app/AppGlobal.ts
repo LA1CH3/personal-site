@@ -12,7 +12,4 @@ export const globalStyles = css`
   * {
     box-sizing: border-box;
   }
-
-  @import url("https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap");
-  @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 `
