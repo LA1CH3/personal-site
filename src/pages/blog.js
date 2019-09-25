@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx } from "theme-ui"
 import { graphql } from "gatsby"
 
 import { AppShell } from "../components/app"
 import { Flex } from "../components/layout"
-import { Link } from "../components/navigation"
+import { BlogHero, BlogContent } from "../components/blog"
 
 const IndexPage = ({
   data: {
@@ -12,35 +12,16 @@ const IndexPage = ({
   },
 }) => (
   <AppShell>
-    <section>
-      <Styled.h2 sx={{ mb: [4] }}>Blog Posts</Styled.h2>
-      <Flex direction="column" childMarginTop={[2, 3, 4]}>
-        {edges.map(({ node }) => (
-          <section sx={{ marginBottom: [1, 2] }}>
-            <Link to={`/blog/${node.fields.slug}`}>
-              <h3
-                sx={{
-                  color: "text",
-                  fontFamily: "heading",
-                  fontSize: [2, 3],
-                  lineHeight: [1.3],
-                  marginBottom: [1, 2],
-                  ":hover": {
-                    color: "secondary",
-                  },
-                }}
-              >
-                {node.frontmatter.title}
-              </h3>
-            </Link>
-            <Styled.p sx={{ fontStyle: "italic" }}>
-              Published {node.frontmatter.date}
-            </Styled.p>
-            <Styled.p>{node.excerpt}</Styled.p>
-          </section>
-        ))}
-      </Flex>
-    </section>
+    <Flex
+      as="article"
+      direction="column"
+      childMarginTop={[5]}
+      alignItems="flex-start"
+      width="100%"
+    >
+      <BlogHero />
+      <BlogContent posts={edges} />
+    </Flex>
   </AppShell>
 )
 

@@ -11,6 +11,7 @@ export const AppHeader = () => (
       backgroundColor: "white",
       color: "black",
       py: [2, 3],
+      px: [2],
     }}
   >
     <AppLayout>

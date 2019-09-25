@@ -20,7 +20,7 @@ const theme = {
   },
   colors: {
     text: "hsl(0,0%,0%)",
-    secondary: "hsl(247, 98%, 50%)",
+    secondary: "hsl(210, 76%, 34%)",
   },
   mediaQueries: {
     small: `@media screen and (min-width: ${breakpoints[0]})`,

@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 
-import { AppLayout } from "../../app/AppLayout"
-import { Flex } from "../../layout/Flex"
-import { Link } from "../../navigation/Link"
+import { AppLayout } from "../app/AppLayout"
+import { Flex } from "../layout/Flex"
+import { Link } from "../navigation/Link"
 
-export const HomepageContent = ({ posts }) => (
+export const BlogContent = ({ posts }) => (
   <section
     sx={{
       width: "100%",
@@ -18,7 +18,7 @@ export const HomepageContent = ({ posts }) => (
           marginBottom: [4],
         }}
       >
-        Latest Blog Posts
+        All Posts
       </Styled.h2>
       <Flex direction="column" childMarginTop={[2]}>
         {posts.map(({ node }) => (

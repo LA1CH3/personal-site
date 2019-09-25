@@ -15,7 +15,7 @@ const IndexPage = ({
     <Flex
       as="article"
       direction="column"
-      childMarginTop={[2]}
+      childMarginTop={[5]}
       alignItems="flex-start"
       width="100%"
     >

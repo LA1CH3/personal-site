@@ -5,7 +5,8 @@ import { jsx } from "theme-ui"
 export const AppLayout = ({ children }) => (
   <div
     sx={{
-      maxWidth: "1150px",
+      width: "100%",
+      maxWidth: "900px",
       margin: "0 auto",
       display: "flex",
       flexDirection: "column",
