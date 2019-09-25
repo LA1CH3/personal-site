@@ -1,14 +1,10 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx } from "theme-ui"
 import { graphql, Link } from "gatsby"
 
 import { AppShell } from "../components/app"
 import { Flex } from "../components/layout"
-
-const mainContentListStyles = {
-  listStyleType: "none",
-  paddingBottom: "64px",
-}
+import { HomepageHero, HomepageContent } from "../components/homepage"
 
 const IndexPage = ({
   data: {
@@ -16,42 +12,15 @@ const IndexPage = ({
   },
 }) => (
   <AppShell>
-    <section>
-      <ul sx={mainContentListStyles}>
-        <li>
-          <Styled.h2>software engineer @ capital one</Styled.h2>
-        </li>
-        <li>
-          <Styled.h2>located in richmond, va</Styled.h2>
-        </li>
-        <li>
-          <Styled.h2>front-end development, design systems</Styled.h2>
-        </li>
-      </ul>
-    </section>
-    <Flex as="section" direction="column" childMarginTop={[1, 3]}>
-      <Styled.h3 as="span">latest blog post:</Styled.h3>
-      {edges.map(({ node }) => (
-        <Flex direction="column">
-          <Link
-            to={`/blog/${node.fields.slug}`}
-            sx={{
-              textTransform: "uppercase",
-              color: "text",
-              fontFamily: "heading",
-              fontSize: [3, 4, 5],
-              lineHeight: [1.3],
-              marginBottom: [1, 2],
-              ":hover": {
-                color: "secondary",
-              },
-            }}
-          >
-            {node.frontmatter.title}
-          </Link>
-          <Styled.p>Published {node.frontmatter.date}</Styled.p>
-        </Flex>
-      ))}
+    <Flex
+      as="article"
+      direction="column"
+      childMarginTop={[2]}
+      alignItems="flex-start"
+      width="100%"
+    >
+      <HomepageHero />
+      <HomepageContent posts={edges} />
     </Flex>
   </AppShell>
 )

@@ -10,14 +10,10 @@ export const AppRoot = ({ children }) => (
       right: 0,
       top: 0,
       bottom: 0,
-      padding: 3,
-      border: "6px solid black",
     }}
   >
     <div
       sx={{
-        maxWidth: "1250px",
-        margin: "0 auto",
         display: "flex",
         flexDirection: "column",
         height: "100%",

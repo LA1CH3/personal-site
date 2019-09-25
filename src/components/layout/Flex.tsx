@@ -12,6 +12,7 @@ export interface FlexProps {
   childMarginLeft?: number | number[]
   children: ReactNode
   width?: string | string[]
+  sx?: any
 }
 
 export const Flex: FC<FlexProps> = ({
@@ -24,6 +25,7 @@ export const Flex: FC<FlexProps> = ({
   flex,
   width,
   children,
+  sx,
 }) => {
   const Tag = as
 
@@ -41,6 +43,7 @@ export const Flex: FC<FlexProps> = ({
           marginLeft: childMarginLeft || null,
           marginTop: childMarginTop || null,
         },
+        ...sx,
       }}
     >
       {children}

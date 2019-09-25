@@ -9,8 +9,8 @@ const breakpoints = ["40rem", "52rem", "64rem"]
 const theme = {
   space: [0, 4, 8, 16, 24, 32, 40],
   fonts: {
-    heading: "Major Mono Display, monospace",
-    body: "Roboto, sans-serif",
+    heading: "Space Mono, sans-serif",
+    body: "Work Sans, sans-serif",
   },
   fontSizes: [12, 16, 20, 24, 32, 48, 64],
   fontWeights: {
@@ -38,8 +38,7 @@ const theme = {
     },
     a: {
       fontFamily: "body",
-      fontSize: [1],
-      color: "text",
+      color: "black",
       textDecoration: "underline",
       ":hover": {
         color: "secondary",
@@ -57,7 +56,7 @@ const theme = {
     h2: {
       fontFamily: "heading",
       color: "text",
-      fontSize: [1, 2, 3, 4],
+      fontSize: [1, 2, 3],
       lineHeight: [1.15],
     },
     h3: {
