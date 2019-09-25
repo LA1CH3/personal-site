@@ -21,13 +21,34 @@ export const AppFooter = () => (
       >
         <Flex as="ul" childMarginLeft={[4]}>
           <li>
-            <Styled.a as="a">Github</Styled.a>
+            <Styled.a
+              as="a"
+              href="https://github.com/la1ch3"
+              target="_blank"
+              rel="noopener"
+            >
+              Github
+            </Styled.a>
           </li>
           <li>
-            <Styled.a as="a">LinkedIn</Styled.a>
+            <Styled.a
+              as="a"
+              href="https://www.linkedin.com/in/jaylaiche/"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn
+            </Styled.a>
           </li>
           <li>
-            <Styled.a as="a">Email</Styled.a>
+            <Styled.a
+              as="a"
+              href="mailto:jay@jaylaiche.com"
+              target="_blank"
+              rel="noopener"
+            >
+              Email
+            </Styled.a>
           </li>
         </Flex>
         <Styled.p>© 2019 Jay Laiche</Styled.p>

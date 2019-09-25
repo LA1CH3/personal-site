@@ -12,4 +12,8 @@ export const globalStyles = css`
   * {
     box-sizing: border-box;
   }
+
+  *:focus {
+    outline: 1px dotted black;
+  }
 `

@@ -6,7 +6,7 @@ import { AppShell } from "../components/app"
 import { Flex } from "../components/layout"
 import { BlogHero, BlogContent } from "../components/blog"
 
-const IndexPage = ({
+const BlogPage = ({
   data: {
     allMdx: { edges },
   },
@@ -25,7 +25,7 @@ const IndexPage = ({
   </AppShell>
 )
 
-export default IndexPage
+export default BlogPage
 
 export const pageQuery = graphql`
   query {

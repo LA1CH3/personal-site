@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx } from "theme-ui"
+import { Link as GatsbyLink } from "gatsby"
 
 import { AppLayout } from "./AppLayout"
 import { Flex } from "../layout"
@@ -26,7 +27,20 @@ export const AppHeader = () => (
             fontFamily: "heading",
           }}
         >
-          Jay Laiche
+          <GatsbyLink
+            to={"/"}
+            sx={{
+              fontFamily: "body",
+              color: "black",
+              textDecoration: "none",
+              ":hover": {
+                color: "secondary",
+                cursor: "pointer",
+              },
+            }}
+          >
+            Jay Laiche
+          </GatsbyLink>
         </h1>
         <nav>
           <Flex
