@@ -15,8 +15,8 @@ const BlogPostPage = ({ data: { mdx } }) => (
       alignItems="flex-start"
       width="100%"
     >
-      <BlogHero title={mdx.frontmatter.title} />
-      <BlogPostContent date={mdx.frontmatter.date} postBody={mdx.body} />
+      <BlogHero title={mdx.frontmatter.title} date={mdx.frontmatter.date} />
+      <BlogPostContent postBody={mdx.body} />
     </Flex>
   </AppShell>
 )

@@ -51,7 +51,9 @@ export const AppFooter = () => (
             </Styled.a>
           </li>
         </Flex>
-        <Styled.p>© 2019 Jay Laiche</Styled.p>
+        <p sx={{ fontFamily: "body", fontSize: [1], lineHeight: [1.2] }}>
+          © 2019 Jay Laiche
+        </p>
       </Flex>
     </AppLayout>
   </footer>

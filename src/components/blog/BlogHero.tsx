@@ -10,6 +10,7 @@ export const BlogHero = ({ title = "Blog", date = false }) => (
     <AppLayout>
       <Flex direction="column" alignItems="flex-start" childMarginTop={[2]}>
         <HeroText as="h2">{title}</HeroText>
+        {date && <HeroText variant="small">{date}</HeroText>}
       </Flex>
     </AppLayout>
   </Hero>

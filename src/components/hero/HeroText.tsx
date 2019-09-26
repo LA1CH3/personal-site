@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 
-export const HeroText = ({ as = "div", children }) => {
+export const HeroText = ({ as = "div", children, variant = "medium" }) => {
   const Tag = as
+
   return (
     // @ts-ignore
     <Tag
@@ -10,7 +11,7 @@ export const HeroText = ({ as = "div", children }) => {
         backgroundColor: "white",
         color: "black",
         fontFamily: "heading",
-        fontSize: [3, 4],
+        fontSize: variant === "small" ? [1, 2] : [3, 4],
         padding: [2],
       }}
     >

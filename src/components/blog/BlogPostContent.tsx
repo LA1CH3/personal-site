@@ -13,14 +13,7 @@ export const BlogPostContent = ({ postBody, date }) => (
     }}
   >
     <AppLayout>
-      <Flex direction="column" childMarginTop={[2]}>
-        <Styled.p
-          sx={{
-            marginBottom: [4],
-          }}
-        >
-          {date}
-        </Styled.p>
+      <Flex direction="column">
         <MDXRenderer>{postBody}</MDXRenderer>
       </Flex>
     </AppLayout>

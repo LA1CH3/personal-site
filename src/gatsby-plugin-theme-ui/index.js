@@ -33,8 +33,9 @@ const theme = {
     },
     p: {
       fontFamily: "body",
-      fontSize: [1],
-      lineHeight: [1.2],
+      fontSize: [1, 2],
+      lineHeight: [1.2, 1.333],
+      marginBottom: [3, 4],
     },
     a: {
       fontFamily: "body",
@@ -62,7 +63,8 @@ const theme = {
     h3: {
       fontFamily: "heading",
       color: "text",
-      fontSize: [1, 2, null],
+      fontSize: [2, 3, 4],
+      marginBottom: [2, 3, 4],
     },
   },
 }

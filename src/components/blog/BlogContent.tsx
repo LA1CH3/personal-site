@@ -24,9 +24,7 @@ export const BlogContent = ({ posts }) => (
         {posts.map(({ node }) => (
           <Flex direction="column" childMarginTop={[2]}>
             <Styled.h3 sx={{ fontFamily: "body" }}>
-              <Link to={`/blog/${node.fields.slug}`}>
-                {node.frontmatter.title}
-              </Link>
+              <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
             </Styled.h3>
             <Styled.p>{node.frontmatter.date}</Styled.p>
           </Flex>

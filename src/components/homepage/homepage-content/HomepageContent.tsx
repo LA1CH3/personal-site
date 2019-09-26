@@ -23,11 +23,15 @@ export const HomepageContent = ({ posts }) => (
       <Flex direction="column" childMarginTop={[2]}>
         {posts.map(({ node }) => (
           <Flex direction="column" childMarginTop={[2]}>
-            <Styled.h3 sx={{ fontFamily: "body" }}>
-              <Link to={`/blog/${node.fields.slug}`}>
-                {node.frontmatter.title}
-              </Link>
-            </Styled.h3>
+            <h3
+              sx={{
+                fontFamily: "heading",
+                color: "text",
+                fontSize: [1, 2, null],
+              }}
+            >
+              <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+            </h3>
             <Styled.p>{node.frontmatter.date}</Styled.p>
           </Flex>
         ))}
