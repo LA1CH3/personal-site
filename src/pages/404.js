@@ -1,5 +1,15 @@
 import React from "react"
 
-const NotFoundPage = () => <div>Uh oh</div>
+import { AppShell } from "../modules/app"
+import { NotFound } from "../modules/not-found"
+import { Flex } from "../components/layout"
 
-export default NotFoundPage
+const IndexPage = () => (
+  <AppShell>
+    <Flex as="article" direction="column" alignItems="flex-start" width="100%">
+      <NotFound />
+    </Flex>
+  </AppShell>
+)
+
+export default IndexPage

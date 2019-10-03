@@ -13,20 +13,6 @@ module.exports = {
         name: `blog`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/art`,
-        name: `art`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/music`,
-        name: `music`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // {

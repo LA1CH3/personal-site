@@ -1,24 +1,36 @@
 /** @jsx jsx */
+import React, { Fragment } from "react"
 import { jsx } from "theme-ui"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
-import { AppShell } from "../components/app"
+import { AppShell } from "../modules/app"
 import { Flex } from "../components/layout"
-import { BlogHero, BlogPostContent } from "../components/blog"
+import { BlogPostContent } from "../modules/blog"
+
+const titleTemplate = "%s | jay laiche - front-end developer"
 
 const BlogPostPage = ({ data: { mdx } }) => (
-  <AppShell>
-    <Flex
-      as="article"
-      direction="column"
-      childMarginTop={[5]}
-      alignItems="flex-start"
-      width="100%"
-    >
-      <BlogHero title={mdx.frontmatter.title} date={mdx.frontmatter.date} />
-      <BlogPostContent postBody={mdx.body} />
-    </Flex>
-  </AppShell>
+  <Fragment>
+    <Helmet
+      titleTemplate={titleTemplate}
+      title={mdx.frontmatter.title.toLowerCase()}
+    />
+    <AppShell>
+      <Flex
+        as="article"
+        direction="column"
+        alignItems="flex-start"
+        width="100%"
+      >
+        <BlogPostContent
+          title={mdx.frontmatter.title}
+          date={mdx.frontmatter.date}
+          postBody={mdx.body}
+        />
+      </Flex>
+    </AppShell>
+  </Fragment>
 )
 
 export default BlogPostPage

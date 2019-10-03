@@ -6,21 +6,39 @@
 
 const breakpoints = ["40rem", "52rem", "64rem"]
 
+const systemFontStack =
+  "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+
+export const colorModesKeys = new Set(["default", "dark", "wildberry"])
+
 const theme = {
-  space: [0, 4, 8, 16, 24, 32, 40],
+  space: [0, 4, 8, 16, 24, 32, 48],
   fonts: {
-    heading: "Space Mono, sans-serif",
-    body: "Work Sans, sans-serif",
+    heading: systemFontStack,
+    body: systemFontStack,
   },
-  fontSizes: [12, 16, 20, 24, 32, 48, 64],
+  fontSizes: [12, 16, 20, 24, 28, 32, 48, 64, 96],
   fontWeights: {
     body: 400,
-    heading: 700,
-    bold: 700,
+    heading: 600,
+    bold: 800,
   },
   colors: {
+    background: "hsl(0, 0%, 100%)",
     text: "hsl(0,0%,0%)",
-    secondary: "hsl(210, 76%, 34%)",
+    secondary: "hsl(255, 100%, 50%)",
+    modes: {
+      dark: {
+        background: "hsl(0, 0%, 0%)",
+        text: "hsl(0, 0%, 100%)",
+        secondary: "hsl(146, 100%, 50%)",
+      },
+      wildberry: {
+        background: "hsl(188,100%,50%)",
+        text: "hsl(0,0%,0%)",
+        secondary: "hsl(255,100%,50%)",
+      },
+    },
   },
   mediaQueries: {
     small: `@media screen and (min-width: ${breakpoints[0]})`,
@@ -33,38 +51,48 @@ const theme = {
     },
     p: {
       fontFamily: "body",
-      fontSize: [1, 2],
-      lineHeight: [1.2, 1.333],
+      color: "text",
+      fontSize: [1, 1, 2],
+      lineHeight: [1.2, 1.5],
       marginBottom: [3, 4],
     },
     a: {
       fontFamily: "body",
-      color: "black",
-      textDecoration: "underline",
+      color: "text",
+      fontWeight: "heading",
+      textDecoration: "none",
       ":hover": {
         color: "secondary",
         cursor: "pointer",
       },
     },
     h1: {
+      fontSize: [6, 7, 8],
       fontFamily: "heading",
+      fontWeight: "bold",
       color: "text",
-      fontSize: [4, null, 5, 6],
-      textTransform: "uppercase",
-      width: [null, "10rem", "20rem"],
-      textAlign: ["center", "left"],
+      marginBottom: [4, 5],
     },
     h2: {
+      fontSize: [4, 5, 6],
       fontFamily: "heading",
+      fontWeight: "bold",
       color: "text",
-      fontSize: [1, 2, 3],
-      lineHeight: [1.15],
     },
     h3: {
       fontFamily: "heading",
       color: "text",
       fontSize: [2, 3, 4],
-      marginBottom: [2, 3, 4],
+      marginBottom: [4],
+      fontWeight: "bold",
+    },
+    h4: {
+      fontFamily: "heading",
+      color: "text",
+      fontSize: [1, 2, 3],
+      paddingTop: 2,
+      marginBottom: [3],
+      fontWeight: "bold",
     },
   },
 }

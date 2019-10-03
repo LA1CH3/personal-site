@@ -1,7 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-
-import { Flex } from "../layout"
+import { Flex } from "../../components/layout"
 
 export const AppContent = ({ children }) => (
   <Flex
