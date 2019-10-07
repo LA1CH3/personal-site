@@ -16,8 +16,8 @@ export const HomepageContent = ({ posts }) => (
         <Styled.h3 sx={{ marginBottom: [4, 5] }}>latest blog posts</Styled.h3>
       </Flex>
       <Flex direction="column" childMarginTop={[2]}>
-        {posts.map(({ node }) => (
-          <Flex direction="column">
+        {posts.map(({ node }, i) => (
+          <Flex key={i} direction="column">
             <Styled.h4
               sx={{
                 marginBottom: 2,
