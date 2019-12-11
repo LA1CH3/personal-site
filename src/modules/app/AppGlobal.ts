@@ -13,6 +13,15 @@ export const globalStyles = css`
     box-sizing: border-box;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h6,
+  p {
+    margin: 0;
+  }
+
   *:focus {
     outline: 1px dotted black;
   }
