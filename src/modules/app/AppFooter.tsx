@@ -15,15 +15,16 @@ export const AppFooter = () => {
     <footer
       sx={{
         marginTop: [3],
+        px: [3, null, 0],
         py: [3],
         width: "100%",
       }}
     >
       <AppLayout>
         <Flex
-          direction={["column", "row"]}
+          direction="row"
           childMarginTop={[3, 0]}
-          justifyContent={[null, "space-between"]}
+          justifyContent="space-between"
           alignItems={["flex-end"]}
         >
           <Flex as="ul" childMarginLeft={[4]}>

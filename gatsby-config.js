@@ -13,8 +13,6 @@ module.exports = {
         name: `blog`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {

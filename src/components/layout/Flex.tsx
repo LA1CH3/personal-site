@@ -12,6 +12,7 @@ export interface FlexProps {
   childMarginLeft?: number | number[]
   children: ReactNode
   width?: string | string[]
+  padding?: string | string[]
   sx?: any
 }
 
